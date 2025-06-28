@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative To-Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>📝 To-Do List</h2>
+      <div class="filters">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('pending')">Pending</button>
+        <button onclick="setFilter('completed')">Completed</button>
+        <span class="theme-toggle" onclick="toggleTheme()">🌓</span>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter your task" />
+      <input type="date" id="dateInput" />
+      <input type="number" id="hourInput" min="1" max="12" placeholder="HH" />
+      <input type="number" id="minuteInput" min="0" max="59" placeholder="MM" />
+      <select id="ampmInput">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+      <select id="purposeInput">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Reminder">Reminder</option>
+      </select>
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
